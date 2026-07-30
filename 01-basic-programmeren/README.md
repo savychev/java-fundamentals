@@ -15,7 +15,7 @@ The absolute basics of Java: variables, primitive types, operators, conditions (
 - **Lussen** — `for (init; voorwaarde; update)` voor een gekend aantal iteraties; `while` controleert de voorwaarde vóóraf; `do-while` controleert achteraf en draait dus **altijd minstens één keer**. `break` stopt de hele lus, `continue` slaat één iteratie over.
 - **Scanner-invoer** — `new Scanner(System.in)` met `nextLine()`, `nextInt()`, `nextDouble()`. Valideer met `hasNextInt()` vóór je `nextInt()` aanroept.
 - **Casting** — *widening* gaat automatisch (`double d = 253;`), *narrowing* vereist een expliciete cast en kapt af: `(int) 10.99 == 10`.
-- **Methoden & overloading** — zelfde naam, verschillende parameterlijst; de compiler kiest op basis van de argumenten (zie `extra/MethodenEnOverloading.java`).
+- **Methoden & overloading** — zelfde naam, verschillende parameterlijst; de compiler kiest op basis van de argumenten (zie `MethodenEnOverloading.java` in het hoofdpackage).
 
 ## 🗂️ File map
 
@@ -25,7 +25,7 @@ The absolute basics of Java: variables, primitive types, operators, conditions (
 | `src/be/intecbrussel/les2/` (`Voorbeeld1-3`, `Oefening1-4`) | Vergelijkings-, logische en samengestelde toewijzingsoperatoren; `float`/`short`; impliciete conversie |
 | `src/be/intecbrussel/les3/` (`IfCondition`, `IfElseCondition`, `IfElseIfCondition`, `Operator*`, `ConditionalOperator`, `StatementSwitch`, `FallThrough`, `Oefening1-5`, `Test`) | `if`/`else`, logische operatoren in condities, ternaire operator, `switch` + fall-through, invoervalidatie |
 | `src/be/intecbrussel/les4/` (`LoopFor*`, `LoopWhile*`, `LoopDoWhile*`, `Oefening1-5`, `Test`) | `for`, `while`, `do-while`, `break`/`continue`, widening en expliciete casts |
-| `src/be/intecbrussel/extra/MethodenEnOverloading.java` | Methoden definiëren, returnwaarden, method overloading |
+| `src/be/intecbrussel/MethodenEnOverloading.java` | Methoden definiëren, returnwaarden, method overloading |
 | `src/Opdracht1/` (`ForExample1-7`, `WhileExample1-5`) | Lusvariaties: aftellen, modulo-filters, exponentiële stappen, `char`-lussen, invoervalidatie in een oneindige lus |
 | `src/Opdracht2/` (`Opd1LoopFor` … `Opd7Geometry`) | Toegepaste opgaven: nettoloon (if/else), korting (gestapelde if's), samengestelde interest (while), examenlogica (`&&`), oppervlakte-menu (switch) |
 | `src/Opdracht3/` (`Oefening1-4`) | Switch cijfer-naar-woord, geneste ternaire operatoren, even/oneven, slagen/zakken |

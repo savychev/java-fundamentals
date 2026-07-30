@@ -2,7 +2,7 @@ package oefening6.oefening2;
 
 /**
  * Concrete subklasse: implementeert de abstracte methode en
- * voegt een eigen extra methode toe.
+ * voegt een eigen bijkomende methode toe.
  */
 public class SubClass extends AbstractClass {
 

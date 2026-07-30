@@ -52,12 +52,12 @@ Exception handling in Java: try/catch/finally, checked vs unchecked, throw/throw
 | `src/ArithmeticExceptions.java` | Delen door nul + finally-blok |
 | `src/MainApp.java` | ClassCastException (Object → String) |
 | `src/NumberFormatExceptionDemo.java` | parseInt op ongeldige tekst, printStackTrace vs getMessage |
+| `src/CheckedVsUncheckedDemo.java` | Checked vs unchecked naast elkaar |
+| `src/OngeldigeLeeftijdException.java` | Eigen checked exception (`extends Exception`) |
+| `src/CustomExceptionDemo.java` | Eigen exception gooien met throw/throws |
+| `src/TryWithResourcesDemo.java` | Try-with-resources met een eigen AutoCloseable |
 | `src/Order.java` | Static- en instantie-initialisatieblokken |
 | `src/OrderDriver.java` | Volgorde van initialisatie aantonen |
-| `src/extra/CheckedVsUncheckedDemo.java` | Checked vs unchecked naast elkaar |
-| `src/extra/OngeldigeLeeftijdException.java` | Eigen checked exception (`extends Exception`) |
-| `src/extra/CustomExceptionDemo.java` | Eigen exception gooien met throw/throws |
-| `src/extra/TryWithResourcesDemo.java` | Try-with-resources met een eigen AutoCloseable |
 | `checkExceptions/src/ArrayIndexOutOfBound.java` | ArrayIndexOutOfBoundsException opvangen |
 | `checkExceptions/src/CheckExceptions.java` | Checked exception doorgeven met `throws` |
 | `checkExceptions/src/CheckExceptions1.java` | Checked exception vangen en wrappen in RuntimeException |

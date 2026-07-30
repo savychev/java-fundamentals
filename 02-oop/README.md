@@ -46,9 +46,13 @@ Working with the core JDK classes: `String`, `StringBuilder`, `Math`, wrapper cl
 | Locatie (onder `src/be/intecbrussel/`) | Concept |
 |---|---|
 | `les1/StringMethods.java` | veelgebruikte `String`-methodes |
+| `les1/StringImmutability.java` | waarom een String nooit verandert |
 | `les1/StringBuilderMethods.java` | `append`, `insert`, `toString`, `reverse` |
-| `les1/MathMethods.java` | `Math`: `abs`, `round`, `max`, `ceil`, `floor`, `random`, `pow` |
+| `les1/StringBuilderVsString.java` | snelheidsverschil `+=` vs `append()` gemeten |
 | `les1/Test.java` | valkuil: `reverse()` wijzigt het originele StringBuilder-object |
+| `les1/MathMethods.java` | `Math`: `abs`, `round`, `max`, `ceil`, `floor`, `random`, `pow` |
+| `les1/MethodOverloading.java` | zelfde naam, andere parameterlijst |
+| `les1/StaticMembers.java` | `static` teller gedeeld door alle objecten |
 | `les1/Oefening1/` | substring, contains, afwisselend hoofd-/kleine letters (2 oplossingen) |
 | `les1/Oefening2/` | palindroomtest met `reverse()`, StringBuilder → String |
 | `les1/Oefening4/` | `Math.max`, `Math.pow`, `Math.random` + even/oneven |
@@ -66,10 +70,6 @@ Working with the core JDK classes: `String`, `StringBuilder`, `Math`, wrapper cl
 | `les2/Oefening6/` | wrapper `toString()` + `equals()` |
 | `les2/Oefening7/` | now(), formatteren, leeftijd berekenen met `Period` |
 | `les2/Oefening8/` | autoboxing, `Float` → `String` → `length()` |
-| `extra/StringImmutability.java` | waarom een String nooit verandert |
-| `extra/StringBuilderVsString.java` | snelheidsverschil `+=` vs `append()` gemeten |
-| `extra/StaticMembers.java` | `static` teller gedeeld door alle objecten |
-| `extra/MethodOverloading.java` | zelfde naam, andere parameterlijst |
 
 ## ⚠️ Pitfalls & interview notes
 

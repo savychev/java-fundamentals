@@ -37,15 +37,15 @@ Reusing and extending classes with `extends`, `super(...)`, method overriding (`
 | `src/be/intecbrussel/les1/Vehicle.java` / `Car.java` | `extends`, overriding met `@Override`, `super.honk()` |
 | `src/be/intecbrussel/les1/Vehicle2.java` / `Car2.java` | Constructor-keten: `this(...)` en `super(...)` met parameter |
 | `src/be/intecbrussel/les1/MainApp.java` | Demo van de constructor-volgorde en beide `honk()`-versies |
+| `src/be/intecbrussel/les1/ProtectedVoorbeeld.java` | `protected` velden en methodes in een subklasse |
+| `src/be/intecbrussel/les1/FinalVoorbeeld.java` | `final` klassen en methodes |
+| `src/be/intecbrussel/les1/ObjectRootVoorbeeld.java` | `Object` als root: `toString()`, `equals()` en `hashCode()` overschrijven |
 | `src/be/intecbrussel/oefening1/oefening1/` | `Animal` + `Dog`/`Cat`/`Cow`: overriding die het supergedrag uitbreidt |
 | `src/be/intecbrussel/oefening1/oefening2/` | `Person`/`Student`/`Driver`: impliciete `super()`, expliciete `super(naam)` en `this(...)` |
 | `src/be/intecbrussel/oefening2/Oefening1.java` | Compacte samenvatting: `extends` + `super(...)` + `@Override` in een bestand |
 | `src/be/intecbrussel/opdracht1/Car.java` | Superklasse met gedeelde velden en rijgedrag |
 | `src/be/intecbrussel/opdracht1/SUV.java` / `Cabrio.java` / `ElectricCar.java` | Subklassen met eigen gedrag en `toString()` via `super.toString()` |
 | `src/be/intecbrussel/opdracht1/MainApp.java` | Demo van de drie autotypes |
-| `src/be/intecbrussel/extra/ProtectedVoorbeeld.java` | `protected` velden en methodes in een subklasse |
-| `src/be/intecbrussel/extra/FinalVoorbeeld.java` | `final` klassen en methodes |
-| `src/be/intecbrussel/extra/ObjectRootVoorbeeld.java` | `Object` als root: `toString()`, `equals()` en `hashCode()` overschrijven |
 
 ## ⚠️ Pitfalls & interview notes
 

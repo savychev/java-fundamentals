@@ -26,7 +26,7 @@ Working with fixed-size collections (`int[]`, `String[]`, 2D arrays), the `java.
   for (Level x : Level.values()) { System.out.println(x.ordinal()); }
   ```
 
-- Enums kunnen ook **velden, een (private) constructor en methodes** hebben — zie `extra/Planeet.java`.
+- Enums kunnen ook **velden, een (private) constructor en methodes** hebben — zie `les3/Planeet.java`.
 
 ## 🗂️ File map
 
@@ -40,6 +40,7 @@ Working with fixed-size collections (`int[]`, `String[]`, 2D arrays), the `java.
 | `src/be/intecbrussel/les3/color/` | Eenvoudige enum + `values()`/`ordinal()` |
 | `src/be/intecbrussel/les3/level/` | Enum in een `switch` |
 | `src/be/intecbrussel/les3/Test.java` | `valueOf()`, `name()`, `ordinal()`, vergelijken met `==` |
+| `src/be/intecbrussel/les3/Planeet.java` | Enum met velden, constructor en methodes |
 | `src/be/intecbrussel/oefening1/` | Basis: declaratie, `charAt`/`length`, even/oneven met for-each |
 | `src/be/intecbrussel/oefening2/` | Som (for-each), char-array, gemiddelde met while + cast |
 | `src/be/intecbrussel/oefening3/` | Char-array met index, twee arrays element per element swappen |
@@ -49,7 +50,6 @@ Working with fixed-size collections (`int[]`, `String[]`, 2D arrays), the `java.
 | `src/be/intecbrussel/opdracht1/` | Punten normaliseren (ternaire operator), `ShoePair`-objecten filteren |
 | `src/be/intecbrussel/opdracht2/` | `IntArrayTools`: `isSorted`, bubble sort, lineair zoeken |
 | `src/be/intecbrussel/test/` | `IntegerArrayUtils`: sorteren, omkeren, statistieken, duplicaten |
-| `src/be/intecbrussel/extra/Planeet.java` | Enum met velden, constructor en methodes |
 
 ## ⚠️ Pitfalls & interview notes
 

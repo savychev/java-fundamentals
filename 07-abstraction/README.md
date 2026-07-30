@@ -25,26 +25,26 @@ Abstract classes and methods in Java: hiding implementation details behind a com
   System.out.println(klant.getName()); // veilig, geen NullPointerException
   ```
 
-- **Template Method-patroon** (`extra/WarmeDrank`): een `final` methode legt de volgorde van het algoritme vast; subklassen vullen alleen de variabele stappen in.
-- **Abstracte klasse vs. interface**: zie de vergelijkingstabel in [../08-interfaces/README.md](../08-interfaces/README.md#-theory-in-short) en het gecombineerde voorbeeld `extra/AbstractVsInterfaceDemo.java`.
+- **Template Method-patroon** (`les1/WarmeDrank`): een `final` methode legt de volgorde van het algoritme vast; subklassen vullen alleen de variabele stappen in.
+- **Abstracte klasse vs. interface**: zie de vergelijkingstabel in [../08-interfaces/README.md](../08-interfaces/README.md#-theory-in-short) en het gecombineerde voorbeeld `les1/AbstractVsInterfaceDemo.java`.
 
 ## 🗂️ File map
 
 | Path | Wat het toont |
 |------|---------------|
+| [src/les1/Animal.java](src/les1/Animal.java) / [Dog.java](src/les1/Dog.java) / [MainApp.java](src/les1/MainApp.java) | Basis: abstracte methode + concrete methode + polymorfisme |
+| [src/les1/Vorm.java](src/les1/Vorm.java) / [Cirkel.java](src/les1/Cirkel.java) / [Rechthoek.java](src/les1/Rechthoek.java) | Abstract vs. concreet; verplichte implementatie |
+| [src/les1/WarmeDrank.java](src/les1/WarmeDrank.java) / [Koffie.java](src/les1/Koffie.java) / [Thee.java](src/les1/Thee.java) | Template Method-patroon |
+| [src/les1/AbstractVsInterfaceDemo.java](src/les1/AbstractVsInterfaceDemo.java) | Abstracte klasse en interface in één voorbeeld |
+| [src/les1/VormenMainApp.java](src/les1/VormenMainApp.java) | Demo van de Vorm- en WarmeDrank-voorbeelden |
+| [src/oefening6/oefening1/](src/oefening6/oefening1/) | `Bank` abstract, `BankA/B/C` concrete invullingen |
+| [src/oefening6/oefening2/](src/oefening6/oefening2/) | Constructor van een abstracte klasse; referentietype bepaalt zichtbaarheid |
 | [src/customer/AbstractCustomer.java](src/customer/AbstractCustomer.java) | Abstracte basisklasse van het Null Object-patroon |
 | [src/customer/RealCustomer.java](src/customer/RealCustomer.java) | De "echte" klant |
 | [src/customer/NullCustomer.java](src/customer/NullCustomer.java) | Het null object: veilig standaardgedrag i.p.v. `null` |
 | [src/customer/CustomerFactory.java](src/customer/CustomerFactory.java) | Factory die nooit `null` teruggeeft |
 | [src/customer/MainApp.java](src/customer/MainApp.java) | Demo zonder één null-check |
-| [src/les1/Animal.java](src/les1/Animal.java) / [Dog.java](src/les1/Dog.java) / [MainApp.java](src/les1/MainApp.java) | Basis: abstracte methode + concrete methode + polymorfisme |
-| [src/oefening6/oefening1/](src/oefening6/oefening1/) | `Bank` abstract, `BankA/B/C` concrete invullingen |
-| [src/oefening6/oefening2/](src/oefening6/oefening2/) | Constructor van een abstracte klasse; referentietype bepaalt zichtbaarheid |
 | [src/robots/](src/robots/) | Overerving met `Robot`, `BendingRobot`, `LiftingRobot`, `CrazyRobot` (override in constructor!) |
-| [src/extra/Vorm.java](src/extra/Vorm.java) / [Cirkel.java](src/extra/Cirkel.java) / [Rechthoek.java](src/extra/Rechthoek.java) | Abstract vs. concreet; verplichte implementatie |
-| [src/extra/WarmeDrank.java](src/extra/WarmeDrank.java) / [Koffie.java](src/extra/Koffie.java) / [Thee.java](src/extra/Thee.java) | Template Method-patroon |
-| [src/extra/AbstractVsInterfaceDemo.java](src/extra/AbstractVsInterfaceDemo.java) | Abstracte klasse en interface in één voorbeeld |
-| [src/extra/ExtraMainApp.java](src/extra/ExtraMainApp.java) | Demo van de extra voorbeelden |
 | [src/Main.java](src/Main.java) | Startpunt van het hoofdstuk |
 
 ## ⚠️ Pitfalls & interview notes

@@ -43,19 +43,19 @@ One object, many forms: the same method call behaves differently depending on th
 | Path | Inhoud |
 |---|---|
 | `src/be/intecbrussel/les1/` | `Animal`/`Cat`/`Duck` + `MainApp` — kernvoorbeeld van dynamic dispatch |
+| `src/be/intecbrussel/les1/PolymorfeCollectiesDemo.java` | Polymorfe array en `List` met abstracte `Vorm` |
 | `src/be/intecbrussel/les1/casting/` | `Parent`/`Child` + `MainApp` — upcasting en downcasting |
+| `src/be/intecbrussel/les1/casting/CastingDemo.java` | Up-/downcasting, `instanceof` en pattern matching (Java 16+) |
 | `src/be/intecbrussel/les1/multiplier/` | `Multiplier` — method overloading (2 vs 3 parameters) |
 | `src/be/intecbrussel/les1/oefening3/` | `Shape`/`Circle`/`Rectangle`/`Triangle` — overloaded methodes per vorm overschreven |
 | `src/be/intecbrussel/les1/overriding/` | `Vehicle`/`Car`/`Bicycle` — method overriding |
+| `src/be/intecbrussel/les1/overriding/OverridingVsOverloadingDemo.java` | Overriding vs overloading naast elkaar |
 | `src/be/intecbrussel/les2/chess/` | `ChessPlayer` (enum) + `ChessAlgorithm` — `final` methode, willekeurige kleur |
 | `src/be/intecbrussel/les2/finalTest/` | `IntecBrussel` — alle initialisatiewijzen van `final` variabelen |
 | `src/be/intecbrussel/les2/oefening4/` | `Vehicle`/`Car`/`Bike`/`Bicycle` — casting-oefening |
 | `src/be/intecbrussel/les2/oefening5/` | Shape-familie + `instanceof`; `Test.java` — veilig downcasten |
 | `src/be/intecbrussel/OpdrachtWolf/` | `Wolf` → `Dog` → `HomelyDog`/`WildDog` → rassen — grote overervingshiërarchie |
 | `src/be/intecbrussel/oefening7/` | `PlanetaryCircumference` — `final` constanten en methode |
-| `src/be/intecbrussel/extra/CastingDemo.java` | Up-/downcasting, `instanceof` en pattern matching (Java 16+) |
-| `src/be/intecbrussel/extra/OverridingVsOverloadingDemo.java` | Overriding vs overloading naast elkaar |
-| `src/be/intecbrussel/extra/PolymorfeCollectiesDemo.java` | Polymorfe array en `List` met abstracte `Vorm` |
 
 ## ⚠️ Pitfalls & interview notes
 

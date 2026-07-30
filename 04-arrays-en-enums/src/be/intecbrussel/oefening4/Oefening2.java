@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 /**
  * Oefening: copyOf() met een grotere lengte dan het origineel.
- * De extra posities worden opgevuld met de defaultwaarde 0.
+ * De nieuwe posities worden opgevuld met de defaultwaarde 0.
  */
 public class Oefening2 {
     public static void main(String[] args) {

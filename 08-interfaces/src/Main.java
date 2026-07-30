@@ -1,6 +1,6 @@
 /**
  * Startpunt van hoofdstuk 08 — Interfaces.
- * De echte voorbeelden staan in de submappen (be.intecbrussel, oefeningen, opdrachten, extra).
+ * De echte voorbeelden staan in de submappen (be.intecbrussel, oefeningen, opdrachten).
  */
 public class Main {
     public static void main(String[] args) {

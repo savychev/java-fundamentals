@@ -34,7 +34,7 @@ public class Car {
         this.hp = hp;
     }
 
-    /** Versnelt: hoe meer pk, hoe groter de extra snelheidswinst. */
+    /** Versnelt: hoe meer pk, hoe groter de bijkomende snelheidswinst. */
     public void accelerate(int amount) {
         int newSpeed = getSpeed() + (amount + (getHp() / 100));
         setSpeed(newSpeed);

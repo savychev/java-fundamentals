@@ -1,6 +1,6 @@
 /**
  * Startpunt van hoofdstuk 07 — Abstraction.
- * De echte voorbeelden staan in de submappen (customer, les1, oefening6, robots, extra).
+ * De echte voorbeelden staan in de submappen (customer, les1, oefening6, robots).
  */
 public class Main {
     public static void main(String[] args) {

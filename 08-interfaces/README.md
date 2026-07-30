@@ -23,7 +23,7 @@ Interfaces in Java: contracts, multiple implementation, default and static metho
   Flashlight lamp = new Flashlight(b); // losse koppeling
   ```
 
-- Sinds Java 8 mag een interface ook **default-** en **static-methodes** bevatten (`extra/Betaalbaar`, `opdrachten/whyPhone/ISimCard`):
+- Sinds Java 8 mag een interface ook **default-** en **static-methodes** bevatten (`be/intecbrussel/les1/Betaalbaar`, `opdrachten/whyPhone/ISimCard`):
 
   ```java
   interface Betaalbaar {
@@ -33,7 +33,7 @@ Interfaces in Java: contracts, multiple implementation, default and static metho
   }
   ```
 
-- Een **functionele interface** heeft precies één abstracte methode en kan met een **lambda** geïmplementeerd worden: `Berekening optellen = (a, b) -> a + b;` (`extra/Berekening`).
+- Een **functionele interface** heeft precies één abstracte methode en kan met een **lambda** geïmplementeerd worden: `Berekening optellen = (a, b) -> a + b;` (`be/intecbrussel/les1/Berekening`).
 
 - **Abstracte klasse vs. interface** (ook gebruikt vanuit [../07-abstraction/README.md](../07-abstraction/README.md)):
 
@@ -57,13 +57,13 @@ Interfaces in Java: contracts, multiple implementation, default and static metho
 | [src/oefeningen/oefening3/](src/oefeningen/oefening3/) | `Vehicle extends Motor, Switch1` + interfaceconstante `doors` |
 | [src/oefeningen/oefening4/](src/oefeningen/oefening4/) | Drie implementaties van `Battery`, interface als type |
 | [src/oefeningen/oefening5/](src/oefeningen/oefening5/) | Programmeren tegen een interface: `Flashlight` + batterijmerken |
+| [src/be/intecbrussel/les1/Betaalbaar.java](src/be/intecbrussel/les1/Betaalbaar.java) | Abstracte, default- én static-methode in één interface |
+| [src/be/intecbrussel/les1/Bankkaart.java](src/be/intecbrussel/les1/Bankkaart.java) / [Smartwatch.java](src/be/intecbrussel/les1/Smartwatch.java) / [Draagbaar.java](src/be/intecbrussel/les1/Draagbaar.java) | Default erven vs. overriden; meervoudige implementatie |
+| [src/be/intecbrussel/les1/Berekening.java](src/be/intecbrussel/les1/Berekening.java) | `@FunctionalInterface` + lambda-teaser |
+| [src/be/intecbrussel/les1/BetaalbaarMainApp.java](src/be/intecbrussel/les1/BetaalbaarMainApp.java) | Demo van default/static-methodes, meervoudige implementatie en een lambda |
 | [src/opdrachten/loveShack/](src/opdrachten/loveShack/) | `Mixable`-contract + abstracte `Food`-hiërarchie + `SmoothieRecipe`-enum |
 | [src/opdrachten/mediaplayer/](src/opdrachten/mediaplayer/) | Adapter-patroon: `MediaAdapter` vertaalt tussen twee contracten |
 | [src/opdrachten/whyPhone/](src/opdrachten/whyPhone/) | Interface-segregatie (5 kleine contracten) + default-methodes in `ISimCard` |
-| [src/extra/Betaalbaar.java](src/extra/Betaalbaar.java) | Abstracte, default- én static-methode in één interface |
-| [src/extra/Bankkaart.java](src/extra/Bankkaart.java) / [Smartwatch.java](src/extra/Smartwatch.java) / [Draagbaar.java](src/extra/Draagbaar.java) | Default erven vs. overriden; meervoudige implementatie |
-| [src/extra/Berekening.java](src/extra/Berekening.java) | `@FunctionalInterface` + lambda-teaser |
-| [src/extra/ExtraMainApp.java](src/extra/ExtraMainApp.java) | Demo van alle extra concepten |
 | [src/Main.java](src/Main.java) | Startpunt van het hoofdstuk |
 
 ## ⚠️ Pitfalls & interview notes
@@ -72,5 +72,5 @@ Interfaces in Java: contracts, multiple implementation, default and static metho
 - Velden in een interface zijn **constanten** (`public static final`) — `Vehicle.doors` is geen instantieveld en kan niet per object verschillen.
 - **Diamantprobleem**: erven twee interfaces dezelfde default-methode, dan dwingt de compiler een eigen override af (`InterfaceA.super.methode()` om te kiezen).
 - Een interface heeft **geen constructor** en geen instantietoestand; heb je gedeelde velden of code nodig, kies dan een abstracte klasse (zie tabel hierboven).
-- `@FunctionalInterface` is niet verplicht voor lambda's, maar bewaakt dat er precies één abstracte methode blijft — extra default/static-methodes mogen wel.
+- `@FunctionalInterface` is niet verplicht voor lambda's, maar bewaakt dat er precies één abstracte methode blijft — bijkomende default/static-methodes mogen wel.
 - Interview-klassieker: "waarom programmeren tegen een interface?" → losse koppeling, testbaarheid (mocks), implementaties wisselen zonder de client te wijzigen (`Flashlight`/`Battery`).

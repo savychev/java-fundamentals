@@ -45,7 +45,9 @@ The folder layout follows the course rhythm — inside each chapter you'll find:
 - **`oefening…`** — exercises (*oefening* = exercise) solved during class
 - **`opdracht…`** — assignments (*opdracht* = assignment), bigger multi-file tasks
 - **`labwerk…`** — lab work sessions
-- **`extra`** — examples I added while revising, to close gaps in coverage
+
+Examples I added myself while revising (to close gaps in coverage) live directly
+inside the matching lesson packages, as a natural continuation of the course material.
 
 Every chapter has its own **`README.md`**: theory in short → file map → pitfalls
 & interview notes. All code comments are in **Dutch**, the course language.

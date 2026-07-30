@@ -43,6 +43,7 @@ Writing your own classes: fields, constructors, `this`, encapsulation with gette
 | `Animal/` | encapsulatie: private velden, setter met validatie, overloaded `eating()` |
 | `Car/` | vier overloaded constructors, static teller, gedrag (speedUp, toggleLights, nummerplaat) |
 | `Circle/` | constructor-chaining met `this(...)`, copy-constructor, static `count`, oppervlakte/omtrek |
+| `ThisDemo.java` | drie toepassingen van `this` (veld, chaining, `return this`) |
 | `Rectangle/` | copy-constructor, setters met `Math.abs()`-validatie, `toString()`, `grow()` |
 | `Auto.java` + `MainApp.java` | private constructor: object kan enkel mét argumenten gemaakt worden |
 | `OefeningRectangle.java` + `MainRectangle.java` | eenvoudige klasse met berekende waarden (area/perimeter) |
@@ -51,9 +52,8 @@ Writing your own classes: fields, constructors, `this`, encapsulation with gette
 | `Oefening1/Oefening1_2/` | `EvenOdd`: zijn alle cijfers even? + `ArithmeticException`-experiment |
 | `Oefening1/Oefening1_3/` | `Calculator`: vijf rekenmethodes op één object |
 | `Test.java` | expliciete no-arg constructor (wat Java anders impliciet doet) |
+| `CompositieDemo.java` | object-compositie: Bestelling → Klant → Adres |
 | `les3/HerhalingsOpdracht/` | placeholders voor de herhalingsopdracht |
-| `extra/ThisDemo.java` | drie toepassingen van `this` (veld, chaining, `return this`) |
-| `extra/CompositieDemo.java` | object-compositie: Bestelling → Klant → Adres |
 
 ## ⚠️ Pitfalls & interview notes
 

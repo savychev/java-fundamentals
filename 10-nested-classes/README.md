@@ -39,6 +39,8 @@ Inner, static nested, local and anonymous classes — when each one fits and wha
 | `src/labWerk/OuterClass.java` | Niet-statische inner class die outer-velden leest |
 | `src/labWerk/OuterClassWithStaticInnerClass.java` | Static nested class met eigen velden + overloads |
 | `src/labWerk/MainApp.java` | Demo: beide varianten aanmaken en gebruiken |
+| `src/labWerk/LocalClassExample.java` | Lokale klasse binnen een methode |
+| `src/labWerk/AnonymousInnerClassExample.java` | Anonieme inner class + lambda-equivalent |
 | `src/labWerk1/ArithmeticOperations.java` | Interface met alle vijf bewerkingen |
 | `src/labWerk1/OuterClass.java` | Inner-class-variant, met bescherming tegen delen door nul |
 | `src/labWerk1/OuterClassWithStaticInnerClass.java` | Static-nested-variant |
@@ -48,9 +50,7 @@ Inner, static nested, local and anonymous classes — when each one fits and wha
 | `src/staticExamples/StaticExample.java` | Wat een static nested class wel/niet kan zien |
 | `src/staticExamples/MainApp.java` | Demo bij OuterClass1 |
 | `src/staticExamples/StaticExampleMainApp.java` | Demo bij StaticExample |
-| `src/extra/AnonymousInnerClassExample.java` | Anonieme inner class + lambda-equivalent |
-| `src/extra/LocalClassExample.java` | Lokale klasse binnen een methode |
-| `src/extra/StaticNestedVsInnerNote.java` | Wanneer static nested vs. inner (met codevoorbeeld) |
+| `src/staticExamples/StaticNestedVsInnerNote.java` | Wanneer static nested vs. inner (met codevoorbeeld) |
 
 ## ⚠️ Pitfalls & interview notes
 
