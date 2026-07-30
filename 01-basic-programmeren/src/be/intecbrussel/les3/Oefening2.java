@@ -1,16 +1,15 @@
 package be.intecbrussel.les3;
 
+/** Oefening: bepaal of een getal positief, negatief of nul is. */
 public class Oefening2 {
     public static void main(String[] args) {
         int input = 0;
 
         if (input > 0) {
             System.out.println("Positive");
-        }
-        else if (input < 0) {
+        } else if (input < 0) {
             System.out.println("Negative");
-        }
-        else {
+        } else {
             System.out.println("Zero");
         }
     }

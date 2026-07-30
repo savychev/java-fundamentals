@@ -1,5 +1,10 @@
 package labWerk1;
 
+/**
+ * Hulpklasse die alle bewerkingen van een {@link ArithmeticOperations}
+ * afdrukt. Werkt via het interface, dus onafhankelijk van de concrete
+ * (inner) class erachter.
+ */
 public class OperationPrinter {
 
     public static void displayAllOperations(ArithmeticOperations ops, String title) {

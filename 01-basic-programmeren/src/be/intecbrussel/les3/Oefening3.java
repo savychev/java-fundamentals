@@ -1,16 +1,18 @@
 package be.intecbrussel.les3;
 
+/** Oefening: aantal dagen per maand — meerdere case-labels delen bewust één blok (fall-through). */
 public class Oefening3 {
     public static void main(String[] args) {
         String month = "February";
         int daysCount = 0;
 
         switch (month) {
+            // Alle maanden met 31 dagen delen hetzelfde blok
             case "January":
             case "March":
             case "May":
             case "July":
-            case "Augustus":
+            case "August":
             case "October":
             case "December":
                 daysCount = 31;
@@ -22,7 +24,7 @@ public class Oefening3 {
                 daysCount = 30;
                 break;
             case "February":
-                daysCount = 28;
+                daysCount = 28; // schrikkeljaren buiten beschouwing gelaten
                 break;
         }
 

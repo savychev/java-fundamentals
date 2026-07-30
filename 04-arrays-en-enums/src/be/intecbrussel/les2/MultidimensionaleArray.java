@@ -1,11 +1,14 @@
 package be.intecbrussel.les2;
 
-import java.util.Arrays;
-
+/**
+ * Tweedimensionale array: een tabel met rijen en kolommen.
+ * new int[2][5] betekent 2 rijen van elk 5 kolommen.
+ */
 public class MultidimensionaleArray {
     public static void main(String[] args) {
         int[][] myArr = new int[2][5];
 
+        // Vullen: eerste index = rij, tweede index = kolom.
         myArr[0][0] = 1;
         myArr[0][1] = 2;
         myArr[0][2] = 3;
@@ -17,6 +20,8 @@ public class MultidimensionaleArray {
         myArr[1][3] = 40;
         myArr[1][4] = 50;
 
+        // Geneste lussen: de buitenste loopt over de rijen,
+        // de binnenste over de kolommen van die rij.
         for (int i = 0; i < myArr.length; i++) {
             for (int n = 0; n < myArr[i].length; n++) {
                 System.out.println(myArr[i][n]);

@@ -1,5 +1,8 @@
 package be.intecbrussel.OpdrachtWolf;
 
+/**
+ * Affenpinscher: huishond die alleen een Duitse roepnaam accepteert.
+ */
 public class Affenpinscher extends HomelyDog {
     private String color;
     private String nickname;
@@ -8,6 +11,14 @@ public class Affenpinscher extends HomelyDog {
         super(name, lifespan, size, coat);
         this.color = color;
         this.nickname = nickname;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public String getNickname() {
+        return nickname;
     }
 
     public void setNickname(String nickname) {
@@ -21,12 +32,12 @@ public class Affenpinscher extends HomelyDog {
         String[] arrGermanNicknames = {"Fritz", "Bruno", "Hans", "Otto", "Kaiser"};
 
         for (String name : arrGermanNicknames) {
-            if (name.equals(getName())) {
+            if (name.equals(nickname)) { // vergelijk met de kandidaat-roepnaam
                 return true;
             }
         }
 
-        return true;
+        return false; // geen Duitse naam gevonden
     }
 
     public void dance() {

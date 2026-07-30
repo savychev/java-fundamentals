@@ -1,5 +1,6 @@
 package be.intecbrussel.les3;
 
+/** Les 3: switch met break per case en een default voor onbekende waarden. */
 public class StatementSwitch {
     public static void main(String[] args) {
         int day = 7;
@@ -7,7 +8,7 @@ public class StatementSwitch {
         switch (day) {
             case 1:
                 System.out.println("Monday");
-                break;
+                break; // zonder break zou de uitvoering doorlopen naar de volgende case
             case 2:
                 System.out.println("Tuesday");
                 break;
@@ -27,7 +28,7 @@ public class StatementSwitch {
                 System.out.println("Sunday");
                 break;
             default:
-                System.out.println("Day number doesn't exists");
+                System.out.println("Day number doesn't exist");
         }
     }
 }

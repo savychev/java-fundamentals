@@ -1,7 +1,11 @@
 package be.intecbrussel.les1.oefening3;
 
+/**
+ * Basisvorm met overloaded methodes; elke subklasse overschrijft de variant
+ * die bij haar past (cirkel: 1 parameter, rechthoek: 2, driehoek: 3).
+ */
 public class Shape {
-    public double getPerimeter(double radius){
+    public double getPerimeter(double radius) {
         return 0;
     }
 

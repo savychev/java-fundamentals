@@ -1,9 +1,18 @@
 package labWerk;
 
+/**
+ * Outer class met een statische geneste (static nested) class.
+ * Een static nested class heeft GEEN toegang tot de instantievelden
+ * van de outer class; daarom heeft MathFunctionsStatic eigen velden a en b.
+ */
 public class OuterClassWithStaticInnerClass {
     int a;
     int b;
 
+    /**
+     * Static nested class: kan zonder instantie van de outer class
+     * aangemaakt worden (new OuterClassWithStaticInnerClass.MathFunctionsStatic()).
+     */
     public static class MathFunctionsStatic implements MyMath {
         private int a;
         private int b;
@@ -16,6 +25,7 @@ public class OuterClassWithStaticInnerClass {
             this.b = b;
         }
 
+        // Varianten zonder parameters: werken op de eigen velden.
         int sum() {
             return a + b;
         }
@@ -28,6 +38,7 @@ public class OuterClassWithStaticInnerClass {
             return Math.max(a, b);
         }
 
+        // Overloaded varianten met parameters: negeren de velden.
         int sum(int a, int b) {
             return a + b;
         }

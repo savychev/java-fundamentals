@@ -1,7 +1,12 @@
 package oefeningen.oefening2;
 
+/**
+ * Eén klasse, twee interfaces: Car combineert de contracten
+ * Motor en Switch1 (meervoudige implementatie).
+ */
 public class Car implements Motor, Switch1 {
-    public boolean isOn = false;
+
+    private boolean isOn = false; // toestand hoort privé te zijn (encapsulatie)
 
     @Override
     public void gas() {
@@ -13,7 +18,7 @@ public class Car implements Motor, Switch1 {
 
     @Override
     public void toggleSwitch() {
-        isOn = !isOn;
+        isOn = !isOn; // toestand omklappen
         System.out.println("Engine " + (isOn ? "on" : "off"));
     }
 }

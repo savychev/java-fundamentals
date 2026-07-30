@@ -1,4 +1,7 @@
 package be.intecbrussel.les2.oefening4;
 
-public class Bike extends Vehicle{
+/**
+ * Motor: subtype van Vehicle.
+ */
+public class Bike extends Vehicle {
 }

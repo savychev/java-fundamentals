@@ -1,6 +1,12 @@
 import java.io.*;
 import java.nio.file.*;
 
+/*
+ * Labo-opdracht: bestanden en mappen aanmaken, tekst schrijven en teruglezen,
+ * en een eenvoudig object naar een bestand serialiseren als tekst (CSV-stijl).
+ * Alles gebeurt in de tijdelijke map van het systeem, zodat er niets in de repo achterblijft.
+ */
+
 class Animal {
     String name;
     boolean edible;
@@ -29,18 +35,20 @@ public class LabWerk {
         String myName = "Dimitri";
         String teacherName = "Hilal";
 
-        Path folderPath = Paths.get("C:\\Users\\fjdsi\\Downloads\\labWerk/From" + myName + "To" + teacherName);
+        // Werkmap in de tijdelijke map van het systeem (geen rommel in de repo)
+        Path folderPath = Paths.get(System.getProperty("java.io.tmpdir"),
+                "labWerk", "From" + myName + "To" + teacherName);
         Path messagePath = folderPath.resolve("message.txt");
         Path animalPath = folderPath.resolve("animal.txt");
 
         try {
-            // create folder
+            // Map aanmaken (inclusief tussenliggende mappen)
             if (!Files.exists(folderPath)) {
                 Files.createDirectories(folderPath);
                 System.out.println("Folder aangemaakt: " + folderPath);
             }
 
-            // create files
+            // Bestanden aanmaken
             if (!Files.exists(messagePath)) {
                 Files.createFile(messagePath);
                 System.out.println("File aangemaakt: " + messagePath);
@@ -55,19 +63,19 @@ public class LabWerk {
             e.printStackTrace();
         }
 
-        // write to message.txt
+        // Schrijven naar message.txt
         try (FileWriter fw = new FileWriter(messagePath.toFile());
              BufferedWriter bw = new BufferedWriter(fw)) {
 
             bw.write("Wist je dat katten soms dromen over muizen?\n");
-            bw.write("Of misschien over wereldheerschappij... 😼");
+            bw.write("Of misschien over wereldheerschappij... :)");
             System.out.println("Bericht geschreven naar message.txt");
 
         } catch (IOException e) {
             e.printStackTrace();
         }
 
-        // read from message.txt
+        // Lezen uit message.txt
         try (FileReader fr = new FileReader(messagePath.toFile());
              BufferedReader br = new BufferedReader(fr)) {
 
@@ -81,26 +89,26 @@ public class LabWerk {
             e.printStackTrace();
         }
 
-        // create object from animal.txt
+        // Object aanmaken dat we willen opslaan
         Animal mijnDier = new Animal("Kat", false);
 
-        // write object to animal.txt
+        // Object wegschrijven naar animal.txt
         try (FileWriter fw = new FileWriter(animalPath.toFile());
              BufferedWriter bw = new BufferedWriter(fw)) {
 
-            bw.write(mijnDier.toString()); // write a string "Kat,false"
+            bw.write(mijnDier.toString()); // schrijft de string "Kat,false"
             System.out.println("Dier opgeslagen in animal.txt");
 
         } catch (IOException e) {
             e.printStackTrace();
         }
 
-        // --- Lees het dier terug uit animal.txt ---
+        // Het dier terug inlezen uit animal.txt
         try (FileReader fr = new FileReader(animalPath.toFile());
              BufferedReader br = new BufferedReader(fr)) {
 
-            String data = br.readLine(); // read the first line
-            Animal gelezenDier = Animal.fromString(data); // create an object from string
+            String data = br.readLine(); // eerste regel lezen
+            Animal gelezenDier = Animal.fromString(data); // object opnieuw opbouwen uit de string
             System.out.println("Gelezen dier:");
             System.out.println("Naam: " + gelezenDier.name);
             System.out.println("Eetbaar: " + gelezenDier.edible);

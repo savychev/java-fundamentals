@@ -1,5 +1,8 @@
 package be.intecbrussel.oefening2;
 
+/**
+ * Oefening: een String omzetten naar een char-array en element per element afdrukken.
+ */
 public class Oefening2 {
     public static void main(String[] args) {
         String str = "Maak van deze string een char array";

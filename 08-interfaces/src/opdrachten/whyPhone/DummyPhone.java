@@ -1,7 +1,13 @@
 package opdrachten.whyPhone;
 
+/**
+ * Simpele telefoon: implementeert maar twee contracten.
+ * ISimCard levert zijn default-methodes kant-en-klaar,
+ * dus alleen IRadio moet hier ingevuld worden.
+ */
 public class DummyPhone implements ISimCard, IRadio {
-        @Override
+
+    @Override
     public void playChannel(double fm) {
         System.out.println("DummyPhone: Playing FM " + fm);
     }

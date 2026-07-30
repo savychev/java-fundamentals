@@ -1,13 +1,15 @@
 package customer;
 
+/**
+ * Basisklasse voor het Null Object-patroon.
+ * Een abstracte klasse kan NIET geïnstantieerd worden ("new AbstractCustomer()" compileert niet);
+ * subklassen zijn VERPLICHT de abstracte methodes te implementeren.
+ */
 public abstract class AbstractCustomer {
-    protected String name;
 
-    public String getName() {
-        return name;
-    }
+    protected String name; // gedeeld veld voor alle subklassen
 
-    public boolean inNil() {
-        return true;
-    }
+    public abstract boolean isNil();   // is dit een "lege" klant? (null object)
+
+    public abstract String getName();  // elke subklasse bepaalt zelf het gedrag
 }

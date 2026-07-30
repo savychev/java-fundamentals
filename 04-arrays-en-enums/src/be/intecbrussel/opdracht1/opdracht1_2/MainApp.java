@@ -1,5 +1,9 @@
 package be.intecbrussel.opdracht1.opdracht1_2;
 
+/**
+ * Opdracht: een object-array van ShoePair-objecten filteren (maat 41 en compleet)
+ * en daarna tellen hoeveel paren niet compleet zijn plus het verloren bedrag.
+ */
 public class MainApp {
     public static void main(String[] args) {
         ShoePair nike = new ShoePair("Nike", false, "white", 41, 69.99);

@@ -1,5 +1,6 @@
 package be.intecbrussel.les3;
 
+/** Oefening: twee getallen vergelijken met if / else-if / else. */
 public class Oefening1 {
     public static void main(String[] args) {
         int num1 = 16;
@@ -7,12 +8,10 @@ public class Oefening1 {
 
         if (num1 > num2) {
             System.out.println("Number 1 is bigger than Number 2");
-        }
-        else if (num1 < num2) {
+        } else if (num1 < num2) {
             System.out.println("Number 2 is bigger than Number 1");
-        }
-        else {
-            System.out.println("Numbers are equal");
+        } else {
+            System.out.println("Numbers are equal"); // geen van beide groter: gelijk
         }
     }
 }

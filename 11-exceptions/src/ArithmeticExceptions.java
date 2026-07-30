@@ -1,3 +1,7 @@
+/**
+ * Demo: ArithmeticException (unchecked) bij delen door nul,
+ * met een finally-blok dat altijd draait.
+ */
 public class ArithmeticExceptions {
     public static void main(String[] args) {
         int a = 10;
@@ -5,14 +9,14 @@ public class ArithmeticExceptions {
         int c;
 
         try {
-            c = a / b;
-            System.out.println(c);
+            c = a / b; // gooit ArithmeticException: delen door nul
+            System.out.println(c); // wordt overgeslagen
         } catch (ArithmeticException e) {
             System.out.println("Het getal kan niet nul zijn!");
+        } finally {
+            // Draait altijd, ook als er geen exception was geweest.
+            System.out.println("Finally-blok werkt!");
         }
-        finally {
-            System.out.println("Finally code werkt!");
-        }
-        System.out.println("Finally code werkt!");
+        System.out.println("Het programma gaat gewoon verder.");
     }
 }

@@ -1,15 +1,19 @@
 package be.intecbrussel;
 
+/**
+ * Demo bij OefeningRectangle: object maken, waarden aanpassen met
+ * setters en de berekende oppervlakte/omtrek opvragen.
+ */
 public class MainRectangle {
     public static void main(String[] args) {
-        OefeningRectangle rectangle = new OefeningRectangle(2, 5); // constructor call
+        OefeningRectangle rectangle = new OefeningRectangle(2, 5); // constructor-aanroep
 
         System.out.println(rectangle.getArea()); // 10
 
         rectangle.setLength(10);
         rectangle.setWidth(25);
 
-        System.out.println(rectangle.getArea()); // 250
+        System.out.println(rectangle.getArea());      // 250
         System.out.println(rectangle.getPerimeter()); // 70
     }
 }

@@ -1,6 +1,10 @@
 package be.intecbrussel.les1.Oefening1;
 
-// Maak een string met de volgende waarde "hello world" maak nu een algoritme dat van de huidige waarde het volgende maakt "HeLlO WoRlD".
+/**
+ * Oefening 1.3 - charAt() + Character.
+ * Maak van "hello world" de waarde "HeLlO WoRlD":
+ * even index -> hoofdletter, oneven index -> kleine letter.
+ */
 public class Oefening1_3 {
     public static void main(String[] args) {
         String str = "hello world";
@@ -10,12 +14,11 @@ public class Oefening1_3 {
         int length = str.length();
 
         for (int i = 0; i < length; i++) {
+            symbol = str.charAt(i);
             if (i % 2 == 0) {
-                symbol = str.charAt(i);
-                result += Character.toUpperCase(symbol);
+                result += Character.toUpperCase(symbol); // even positie -> hoofdletter
             } else {
-                symbol = str.charAt(i);
-                result += Character.toLowerCase(symbol);
+                result += Character.toLowerCase(symbol); // oneven positie -> kleine letter
             }
         }
         System.out.println(result);

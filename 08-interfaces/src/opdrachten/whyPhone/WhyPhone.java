@@ -1,14 +1,16 @@
 package opdrachten.whyPhone;
 
+/** Concreet telefoonmodel: erft alle contract-implementaties van SmartPhone. */
 public class WhyPhone extends SmartPhone {
+
     private final String COLOR;
 
-    public WhyPhone(double PRICE, String BRAND, String COLOR) {
-        super(PRICE, BRAND);
-        this.COLOR = COLOR;
+    public WhyPhone(double price, String brand, String color) {
+        super(price, brand);
+        this.COLOR = color;
     }
 
-    public String getCOLOR() {
+    public String getColor() {
         return COLOR;
     }
 }

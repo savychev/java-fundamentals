@@ -1,7 +1,9 @@
 package be.intecbrussel.OpdrachtWolf;
 
+/**
+ * Huishond: voegt een vachttype (coat) toe aan Dog.
+ */
 public class HomelyDog extends Dog {
-    private char size = 'M';
     private char coat;
 
     public HomelyDog(String name, int lifespan, char size, char coat) {
@@ -9,11 +11,8 @@ public class HomelyDog extends Dog {
         this.coat = coat;
     }
 
-    public void setSize(char size) {
-        if (size == 'S' || size == 'M' || size == 'L')
-            this.size = size;
-        else
-            System.out.println("The size can be S, M or L");
+    public char getCoat() {
+        return coat;
     }
 
     public void setCoat(char coat) {

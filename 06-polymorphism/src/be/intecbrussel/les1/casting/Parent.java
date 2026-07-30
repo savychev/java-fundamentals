@@ -1,5 +1,8 @@
 package be.intecbrussel.les1.casting;
 
+/**
+ * Superklasse voor het casting-voorbeeld.
+ */
 class Parent {
     String name;
 

@@ -1,5 +1,9 @@
 package be.intecbrussel.les1;
 
-public interface FourLeggedMammal extends Animal, Hunter{
+/**
+ * Anders dan bij klassen mag een interface MEERDERE interfaces
+ * tegelijk uitbreiden (meervoudige overerving van contracten).
+ */
+public interface FourLeggedMammal extends Animal, Hunter {
     void walkWithFourLegs();
 }

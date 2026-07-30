@@ -1,8 +1,10 @@
 package opdrachten.loveShack.mixables.fruits;
 
+/** Concreet ingrediënt: krijgt zijn prijs mee en implementeert mix(). */
 public class Orange extends Fruit {
+
     public Orange(double pricePerPiece) {
-        super(pricePerPiece);
+        super(pricePerPiece); // bugfix: de prijs werd voorheen genegeerd
     }
 
     @Override

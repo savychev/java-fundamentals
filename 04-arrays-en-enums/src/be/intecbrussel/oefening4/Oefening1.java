@@ -3,6 +3,11 @@ package be.intecbrussel.oefening4;
 import java.util.Arrays;
 import java.util.Collections;
 
+/**
+ * Oefening: sorteren, oplopend en aflopend.
+ * Collections.reverseOrder() werkt alleen met object-arrays (Double, String),
+ * niet met primitieve arrays zoals double[].
+ */
 public class Oefening1 {
     public static void main(String[] args) {
         Double[] arrDouble = {
@@ -17,12 +22,12 @@ public class Oefening1 {
                 "zon", "maan", "ster", "water", "vuur"
         };
 
-        Arrays.sort(arrDouble);
+        Arrays.sort(arrDouble); // oplopend
         System.out.println(Arrays.toString(arrDouble));
-        Arrays.sort(arrDouble, Collections.reverseOrder());
+        Arrays.sort(arrDouble, Collections.reverseOrder()); // aflopend, via een Comparator
         System.out.println(Arrays.toString(arrDouble));
 
-        Arrays.sort(arrStr);
+        Arrays.sort(arrStr); // alfabetisch
         System.out.println(Arrays.toString(arrStr));
         Arrays.sort(arrStr, Collections.reverseOrder());
         System.out.println(Arrays.toString(arrStr));

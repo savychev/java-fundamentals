@@ -2,13 +2,17 @@ package be.intecbrussel.oefening6.oefening2;
 
 import java.util.Scanner;
 
+/**
+ * Oefening: gebruikersinvoer omzetten naar een enum-constante met valueOf()
+ * en die in een switch gebruiken.
+ * Let op: valueOf() gooit een IllegalArgumentException bij een onbekende naam.
+ */
 public class MainApp {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        Week[] weekArr = Week.values();
-
         System.out.println("Write the day of week: ");
+        // toUpperCase() omdat de constantennamen in hoofdletters staan.
         String input = scanner.nextLine().toUpperCase();
 
         switch (Week.valueOf(input)) {
@@ -33,5 +37,7 @@ public class MainApp {
             case SUNDAY:
                 System.out.println("It's sunday");
         }
+
+        scanner.close();
     }
 }

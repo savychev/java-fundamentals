@@ -2,14 +2,15 @@ package Opdracht2;
 
 import java.util.Scanner;
 
+/** Oefening: oppervlakte berekenen met een switch-menu (rechthoek, driehoek, cirkel). */
 public class Opd7Geometry {
     public static void main(String[] args) {
         Scanner myScanner = new Scanner(System.in);
 
         int figure;
-        String result = "";
+        String result;
 
-        System.out.print("Enter the name of figure: ");
+        System.out.print("Choose a figure (1 = rectangle, 2 = triangle, 3 = circle): ");
         figure = myScanner.nextInt();
 
         switch (figure) {
@@ -18,7 +19,7 @@ public class Opd7Geometry {
                 int side1 = myScanner.nextInt();
                 System.out.print("Enter the length of the second side: ");
                 int side2 = myScanner.nextInt();
-                result = "The ares of the rectangle is " + side1 * side2;
+                result = "The area of the rectangle is " + side1 * side2;
                 break;
             case 2:
                 System.out.println("Enter the base of the triangle: ");
@@ -29,8 +30,11 @@ public class Opd7Geometry {
                 break;
             case 3:
                 System.out.println("Enter the radius of the circle: ");
-                double radius = myScanner.nextInt();
+                double radius = myScanner.nextDouble(); // kommagetal toegestaan voor de straal
                 result = "The area of the circle is " + Math.PI * radius * radius;
+                break;
+            default:
+                result = "Unknown figure."; // default vangt ongeldige keuzes op
         }
 
         System.out.print(result);

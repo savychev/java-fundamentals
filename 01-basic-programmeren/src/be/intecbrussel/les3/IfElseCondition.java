@@ -1,5 +1,6 @@
 package be.intecbrussel.les3;
 
+/** Les 3: if/else — precies één van de twee blokken wordt altijd uitgevoerd. */
 public class IfElseCondition {
     public static void main(String[] args) {
         int num = 101;

@@ -2,19 +2,22 @@ package be.intecbrussel.les2;
 
 import java.time.Duration;
 import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
 
+/**
+ * Duration: een tijdsduur op basis van tijd (uren, minuten, seconden).
+ * Vergelijk met Period, dat op datums (jaren/maanden/dagen) werkt.
+ */
 public class Class_Duration {
     public static void main(String[] args) {
-        LocalDateTime ldt = LocalDateTime.now();
-        DateTimeFormatter myFormatter = DateTimeFormatter.ofPattern("dd-MMyyyy HH:mm:ss");
-        LocalDateTime oldDate = LocalDateTime.of(2016,8, 31, 10, 20, 55);
-        String formattedDate = ldt.format(myFormatter);
+        LocalDateTime now = LocalDateTime.now();
+        LocalDateTime oldDate = LocalDateTime.of(2016, 8, 31, 10, 20, 55);
 
-        Duration seconds = Duration.ofHours(1);
-        System.out.println(seconds.getSeconds() + " seconds");
+        // een vaste duur van 1 uur, uitgedrukt in seconden
+        Duration oneHour = Duration.ofHours(1);
+        System.out.println(oneHour.getSeconds() + " seconds"); // 3600 seconds
 
-        Duration duration = Duration.between(oldDate, ldt);
+        // het verschil tussen twee momenten
+        Duration duration = Duration.between(oldDate, now);
         System.out.println(duration.getSeconds() + " seconds");
     }
 }

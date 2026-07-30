@@ -1,11 +1,17 @@
 package be.intecbrussel.Rectangle;
 
+/**
+ * Rechthoek met vier constructors (incl. copy-constructor), setters met
+ * validatie (Math.abs) en een eigen toString(). De no-arg constructor
+ * delegeert via this(...) naar de volledige constructor.
+ */
 public class Rectangle {
     private int height;
     private int width;
     private int xPos;
     private int yPos;
 
+    // constructor-chaining: delegeert naar de constructor met 4 parameters
     public Rectangle() {
         this(1, 1, 1, 1);
     }
@@ -24,6 +30,7 @@ public class Rectangle {
         setYPos(yPos);
     }
 
+    // copy-constructor: nieuwe rechthoek met dezelfde waarden
     public Rectangle(Rectangle obj) {
         setHeight(obj.height);
         setWidth(obj.width);
@@ -47,6 +54,7 @@ public class Rectangle {
         return yPos;
     }
 
+    // validatie: een negatieve waarde wordt automatisch positief gemaakt
     public void setHeight(int height) {
         this.height = Math.abs(height);
     }
@@ -64,7 +72,7 @@ public class Rectangle {
     }
 
     public void grow(int value) {
-        if (value > 0) {
+        if (value > 0) { // enkel groeien, niet krimpen
             this.height += value;
             this.width += value;
         }
@@ -75,7 +83,7 @@ public class Rectangle {
     }
 
     public int getPerimeter() {
-        return 2 * (getWidth() * getHeight());
+        return 2 * (getWidth() + getHeight()); // omtrek = 2 * (b + h)
     }
 
     @Override

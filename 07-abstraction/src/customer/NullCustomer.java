@@ -1,13 +1,20 @@
 package customer;
 
-public class NullCustomer extends AbstractCustomer{
+/**
+ * NULL OBJECT-PATROON: dit object vervangt <code>null</code>.
+ * In plaats van overal null-checks te schrijven, geeft de factory dit
+ * onschadelijke "lege" object terug. Het gedraagt zich neutraal, dus de
+ * aanroeper kan gewoon methodes oproepen zonder NullPointerException.
+ */
+public class NullCustomer extends AbstractCustomer {
+
     @Override
-    public String getName() {
-        return super.getName();
+    public boolean isNil() {
+        return true; // markeert: dit is geen echte klant
     }
 
     @Override
-    public boolean inNil() {
-        return super.inNil();
+    public String getName() {
+        return "Klant niet gevonden"; // veilig standaardgedrag i.p.v. null
     }
 }

@@ -1,5 +1,8 @@
 package be.intecbrussel.OpdrachtWolf;
 
+/**
+ * Belgische Mechelaar: wilde hond die kan verdedigen en aanvallen.
+ */
 public class BelgianMalinois extends WildDog {
     private boolean dangerous;
     private double maxRunningSpeed;

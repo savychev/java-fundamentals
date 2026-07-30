@@ -1,8 +1,10 @@
 package opdrachten.loveShack.mixables.vegetables;
 
+/** Concreet ingrediënt: krijgt zijn prijs mee en implementeert mix(). */
 public class Celery extends Vegetable {
+
     public Celery(double pricePerPiece) {
-        super(1);
+        super(pricePerPiece); // bugfix: de prijs werd voorheen genegeerd
     }
 
     @Override

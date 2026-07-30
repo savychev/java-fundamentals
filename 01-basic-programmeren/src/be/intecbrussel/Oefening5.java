@@ -1,6 +1,8 @@
 package be.intecbrussel;
+
 import java.util.Scanner;
 
+/** Oefening: het gemiddelde van vijf ingelezen getallen berekenen. */
 public class Oefening5 {
     public static void main(String[] args) {
         Scanner myScanner = new Scanner(System.in);
@@ -16,7 +18,8 @@ public class Oefening5 {
         System.out.println("Enter fifth number: ");
         int num5 = myScanner.nextInt();
 
-        int average = (num1+num2+num3+num4+num5)/5;
+        // Gehele deling: het gemiddelde wordt naar beneden afgerond (int / int = int)
+        int average = (num1 + num2 + num3 + num4 + num5) / 5;
 
         System.out.println("Average of five numbers is: " + average);
     }

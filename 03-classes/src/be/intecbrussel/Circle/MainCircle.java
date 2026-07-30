@@ -1,13 +1,15 @@
 package be.intecbrussel.Circle;
 
-// Ik ben nog bezig met deze opdracht
-
+/**
+ * Demo bij Circle: alle constructors (incl. copy-constructor),
+ * getters/setters, oppervlakte/omtrek en de static teller.
+ */
 public class MainCircle {
     public static void main(String[] args) {
-        Circle circle1 = new Circle();
+        Circle circle1 = new Circle();          // straal = 1 (standaard)
         Circle circle2 = new Circle(20);
         Circle circle3 = new Circle(30, 1, 1);
-        Circle circle4 = new Circle(circle3);
+        Circle circle4 = new Circle(circle3);   // kopie van circle3
 
         int resultX = circle1.getX();
         System.out.println(resultX); // 0
@@ -26,7 +28,7 @@ public class MainCircle {
         System.out.println("\n");
 
         int resultRadius = circle1.getRadius();
-        System.out.println(resultRadius); // 0 ???????????????
+        System.out.println(resultRadius); // 1 - standaardwaarde uit de no-arg constructor
         circle1.setRadius(10);
         resultRadius = circle1.getRadius();
         System.out.println(resultRadius); // 10
@@ -34,15 +36,15 @@ public class MainCircle {
         System.out.println("\n");
 
         double resultArea = circle1.getArea();
-        System.out.println(resultArea); // AREA
+        System.out.println(resultArea);      // oppervlakte: pi * 10^2
         double resultPerimeter = circle1.getPerimeter();
-        System.out.println(resultPerimeter); // PERIMETER
+        System.out.println(resultPerimeter); // omtrek: 2 * pi * 10
 
         circle1.grow(3);
         resultRadius = circle1.getRadius();
         System.out.println(resultRadius); // 13
 
+        // de copy-constructor telt ook mee via this(...)
         System.out.println(Circle.getCount()); // 4
-
     }
 }

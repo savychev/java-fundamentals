@@ -2,14 +2,19 @@ package be.intecbrussel.oefening3;
 
 import java.util.Arrays;
 
+/**
+ * Oefening: de inhoud van twee arrays element per element omwisselen (swap),
+ * met een tijdelijke variabele als tussenstap.
+ */
 public class Oefening2 {
     public static void main(String[] args) {
         String[] firstArray = {"Intec", "is", "the", "best!"};
         String[] secondArray = {"C#", "is", "the", "worst!"};
 
+        // Wisselen kan alleen veilig als beide arrays even lang zijn.
         if (firstArray.length == secondArray.length) {
             for (int i = 0; i < firstArray.length; i++) {
-                String temp = firstArray[i];
+                String temp = firstArray[i]; // waarde even opzijzetten
                 firstArray[i] = secondArray[i];
                 secondArray[i] = temp;
             }

@@ -1,7 +1,12 @@
 package robots;
 
-public class CrazyRobot extends Robot
-{
+/**
+ * Robot die de boot-methode overschrijft: hij toont zijn naam omgekeerd.
+ * Omdat Robot boot() in de CONSTRUCTOR aanroept, wordt deze override al
+ * tijdens het aanmaken uitgevoerd (klassieke valkuil!).
+ */
+public class CrazyRobot extends Robot {
+
     public CrazyRobot() {
         this("Unknown");
     }
@@ -12,7 +17,7 @@ public class CrazyRobot extends Robot
 
     @Override
     public void boot() {
-        super.boot();
+        super.boot(); // eerst het normale bootgedrag
         String reversedName = new StringBuilder(getUnitName()).reverse().toString();
         System.out.println("Crazy boot! Reversed name: " + reversedName);
     }

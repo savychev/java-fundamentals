@@ -1,5 +1,9 @@
 package be.intecbrussel.oefening1.oefening2;
 
+/**
+ * Superklasse met twee constructors: elke print toont
+ * welke constructor wanneer wordt uitgevoerd.
+ */
 public class Person {
     private String name;
 

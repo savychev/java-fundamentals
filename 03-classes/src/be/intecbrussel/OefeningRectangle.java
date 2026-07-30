@@ -1,5 +1,9 @@
 package be.intecbrussel;
 
+/**
+ * Eenvoudige oefenklasse: rechthoek met twee constructors,
+ * getters/setters en berekende waarden (oppervlakte en omtrek).
+ */
 public class OefeningRectangle {
     int length;
     int width;
@@ -30,6 +34,7 @@ public class OefeningRectangle {
         this.width = width;
     }
 
+    // berekende waarde: telkens opnieuw uitgerekend uit lengte en breedte
     public int getArea() {
         area = this.length * this.width;
         return area;

@@ -1,5 +1,9 @@
 package be.intecbrussel.opdracht1.opdracht1_2;
 
+/**
+ * Modelklasse: een paar schoenen met merk, kleur, maat, prijs
+ * en een vlag die aangeeft of het paar compleet is.
+ */
 public class ShoePair {
     private String brand;
     private boolean complete;

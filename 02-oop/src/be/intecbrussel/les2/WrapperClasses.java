@@ -1,5 +1,10 @@
 package be.intecbrussel.les2;
 
+/**
+ * Wrapper-klassen: elk primitief type heeft een object-tegenhanger
+ * (int -> Integer, char -> Character, ...).
+ * Autoboxing en unboxing gebeuren automatisch.
+ */
 public class WrapperClasses {
     public static void main(String[] args) {
         byte myByte = 10;
@@ -7,7 +12,7 @@ public class WrapperClasses {
         int myInt = 30;
         long myLong = 40;
         float myFloat = 50.0F;
-        double MyDouble = 60.0D;
+        double myDouble = 60.0D;
         char myChar = 'a';
         boolean myBoolean = true;
 
@@ -16,50 +21,50 @@ public class WrapperClasses {
         System.out.println(myInt);
         System.out.println(myLong);
         System.out.println(myFloat);
-        System.out.println(MyDouble);
+        System.out.println(myDouble);
         System.out.println(myChar);
         System.out.println(myBoolean);
 
         System.out.println("---");
 
-        //Autoboxing: Converting primitieve naar objecten
-        Byte byteobj = myByte;
-        Short shortobj = myShort;
-        Integer intobj = myInt;
-        Long longobj = myLong;
-        Float floatobj = myFloat;
-        Double doubleobj = MyDouble;
-        Character charobj = myChar;
-        Boolean boolobj = myBoolean;
+        // Autoboxing: primitieven worden automatisch objecten
+        Byte byteObj = myByte;
+        Short shortObj = myShort;
+        Integer intObj = myInt;
+        Long longObj = myLong;
+        Float floatObj = myFloat;
+        Double doubleObj = myDouble;
+        Character charObj = myChar;
+        Boolean boolObj = myBoolean;
 
-        System.out.println(byteobj);
-        System.out.println(shortobj);
-        System.out.println(intobj);
-        System.out.println(longobj);
-        System.out.println(floatobj);
-        System.out.println(doubleobj);
-        System.out.println(charobj);
-        System.out.println(boolobj);
+        System.out.println(byteObj);
+        System.out.println(shortObj);
+        System.out.println(intObj);
+        System.out.println(longObj);
+        System.out.println(floatObj);
+        System.out.println(doubleObj);
+        System.out.println(charObj);
+        System.out.println(boolObj);
 
         System.out.println("---");
 
-        //Unboxing: Converting Objects to Primitives
-        byte bytevalue = byteobj;
-        short shortvalue = shortobj;
-        int intvalue = intobj;
-        long longvalue = longobj;
-        float floatvalue = floatobj;
-        double doublevalue = doubleobj;
-        char charvalue = charobj;
-        boolean boolvalue = boolobj;
+        // Unboxing: objecten worden automatisch weer primitieven
+        byte byteValue = byteObj;
+        short shortValue = shortObj;
+        int intValue = intObj;
+        long longValue = longObj;
+        float floatValue = floatObj;
+        double doubleValue = doubleObj;
+        char charValue = charObj;
+        boolean boolValue = boolObj;
 
-        System.out.println(bytevalue);
-        System.out.println(shortvalue);
-        System.out.println(intvalue);
-        System.out.println(longvalue);
-        System.out.println(floatvalue);
-        System.out.println(doublevalue);
-        System.out.println(charvalue);
-        System.out.println(boolvalue);
+        System.out.println(byteValue);
+        System.out.println(shortValue);
+        System.out.println(intValue);
+        System.out.println(longValue);
+        System.out.println(floatValue);
+        System.out.println(doubleValue);
+        System.out.println(charValue);
+        System.out.println(boolValue);
     }
 }

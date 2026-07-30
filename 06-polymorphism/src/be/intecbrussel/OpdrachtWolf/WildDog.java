@@ -1,12 +1,15 @@
 package be.intecbrussel.OpdrachtWolf;
 
+/**
+ * Wilde hond: kan jagen en meerdere keren blaffen.
+ */
 public class WildDog extends Dog {
-    private char size = 'L';
 
     public WildDog(String name, int lifespan, char size) {
         super(name, lifespan, size);
     }
 
+    // Overloading: bark(int) bestaat naast bark() uit de superklasse Dog
     public void bark(int times) {
         for (int i = 0; i < times; i++) {
             System.out.print(" wow");

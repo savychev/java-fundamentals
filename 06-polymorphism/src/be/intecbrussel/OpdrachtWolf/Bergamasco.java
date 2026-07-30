@@ -1,5 +1,8 @@
 package be.intecbrussel.OpdrachtWolf;
 
+/**
+ * Bergamasco: huishond met lange vacht en beperkte topsnelheid.
+ */
 public class Bergamasco extends HomelyDog {
     private int maxRunningSpeed;
     private double hairLength;

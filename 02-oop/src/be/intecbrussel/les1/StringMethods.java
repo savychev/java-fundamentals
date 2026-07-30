@@ -1,40 +1,42 @@
 package be.intecbrussel.les1;
 
+/**
+ * Veelgebruikte methodes van de klasse String.
+ * Let op: String is immutable - elke methode geeft een NIEUWE String terug,
+ * het origineel verandert nooit.
+ */
 public class StringMethods {
     public static void main(String[] args) {
         String str = "Hello world!";
         String strBlank = "";
 
-        // method toUpperCase()
+        // toUpperCase() / toLowerCase()
         System.out.println(str.toUpperCase());
-
-        // method toLowerCase()
         System.out.println(str.toLowerCase());
 
-        // method length()
+        // length() - aantal karakters
         System.out.println(str.length());
 
-        // method isBlank()
+        // isBlank() - true bij lege string of enkel witruimte
         System.out.println(strBlank.isBlank());
 
-        // method replace()
+        // replace() - vervangt alle voorkomens van een karakter
         System.out.println(str.replace('w', 'W'));
 
-        // method strip()
+        // strip() - verwijdert witruimte vooraan en achteraan
         String strToStrip = "   hello world!   ";
         System.out.println(strToStrip);
         System.out.println(strToStrip.strip());
-        System.out.println(strToStrip.stripLeading());
-        System.out.println(strToStrip.stripTrailing());
+        System.out.println(strToStrip.stripLeading());  // enkel vooraan
+        System.out.println(strToStrip.stripTrailing()); // enkel achteraan
 
-        // method indexOf()
+        // indexOf() - positie van het eerste voorkomen (-1 indien niet gevonden)
         System.out.println(str.indexOf("world"));
 
-        // method contains()
+        // contains() - bevat de string de deelstring?
         System.out.println(str.contains("world"));
 
-        // method substring()
+        // substring() - deel van de string: beginindex inclusief, eindindex exclusief
         System.out.println(str.substring(6, 11));
-
     }
 }

@@ -1,23 +1,24 @@
 package be.intecbrussel.Oefening1.Oefening1_2;
 
-//Schrijf een methode om te controleren of elk cijfer van een bepaald geheel getal even is. Is het getal even, retourneer dan true als elk cijfer oneven is retourneer false.
-//
-//Opmerking: 1, 3, 5, 7, 9 zijn oneven cijfers en 0, 2, 4, 6 en 8 zijn even cijfers
-//
-//Voorbeeld data: (8642)->true (123)->false (200)->true.
-
-public class  EvenOdd {
+/**
+ * Oefening 1.2 - controleer of ELK cijfer van een geheel getal even is.
+ * Retourneer true als elk cijfer even is, anders false.
+ *
+ * Opmerking: 1, 3, 5, 7, 9 zijn oneven cijfers; 0, 2, 4, 6 en 8 zijn even.
+ * Voorbeelddata: (8642) -> true, (123) -> false, (200) -> true.
+ */
+public class EvenOdd {
 
     public EvenOdd() {
     }
 
     public boolean areAllNumsEven(int num) {
         while (num > 0) {
-            int digit = num % 10;
+            int digit = num % 10; // laatste cijfer afsplitsen
             if (digit % 2 != 0) {
-                return false;
+                return false;     // een oneven cijfer volstaat om te stoppen
             }
-            num /= 10;
+            num /= 10;            // laatste cijfer verwijderen
         }
         return true;
     }

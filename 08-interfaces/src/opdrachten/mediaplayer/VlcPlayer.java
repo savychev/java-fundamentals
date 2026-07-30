@@ -1,6 +1,8 @@
 package opdrachten.mediaplayer;
 
-public class VlcPlayer implements AdvancedMediaPlayer{
+/** Kan alleen VLC afspelen; playMp4 blijft bewust leeg. */
+public class VlcPlayer implements AdvancedMediaPlayer {
+
     @Override
     public void playVlc(String fileName) {
         System.out.println("Playing VLC file. Name: " + fileName);
@@ -8,6 +10,6 @@ public class VlcPlayer implements AdvancedMediaPlayer{
 
     @Override
     public void playMp4(String fileName) {
-
+        // bewust leeg: dit toestel ondersteunt geen MP4
     }
 }

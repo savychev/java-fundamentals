@@ -1,9 +1,14 @@
 package be.intecbrussel.opdracht1;
 
+/**
+ * Opdracht: superklasse voor alle autotypes (SUV, Cabrio, ElectricCar).
+ * Bevat de gemeenschappelijke velden en het basisgedrag voor
+ * versnellen, vertragen en parkeren.
+ */
 public class Car {
     private String color;
     private int speed;
-    private int hp;
+    private int hp; // vermogen in pk
 
     public String getColor() {
         return color;
@@ -29,24 +34,19 @@ public class Car {
         this.hp = hp;
     }
 
+    /** Versnelt: hoe meer pk, hoe groter de extra snelheidswinst. */
     public void accelerate(int amount) {
-        int hp = getHp();
-        int speed = getSpeed();
-        int newSpeed = speed + (amount + (hp / 100));
-
-//        System.out.println("amount = " + amount + "; speed = " + speed+ "; newSpeed = " + newSpeed);
-
+        int newSpeed = getSpeed() + (amount + (getHp() / 100));
         setSpeed(newSpeed);
     }
 
+    /** Vertraagt volgens dezelfde formule als accelerate(). */
     public void slow(int amount) {
-        int hp = getHp();
-        int speed = getSpeed();
-        int newSpeed = speed - (amount + (hp / 100));
-
+        int newSpeed = getSpeed() - (amount + (getHp() / 100));
         setSpeed(newSpeed);
     }
 
+    /** Parkeren: de snelheid gaat naar 0. */
     public void park() {
         setSpeed(0);
     }

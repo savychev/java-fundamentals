@@ -1,13 +1,17 @@
 package opdrachten.whyPhone;
 
+/**
+ * Interface-segregatie in de praktijk: de telefoon is opgebouwd uit
+ * vijf kleine contracten in plaats van één grote interface.
+ */
 public class SmartPhone implements ICamera, IGPS, IRadio, ISimCard, IWifi {
+
     private final double PRICE;
     private final String BRAND;
-    private int numberOfPhotos;
 
-    public SmartPhone(double PRICE, String BRAND) {
-        this.PRICE = PRICE;
-        this.BRAND = BRAND;
+    public SmartPhone(double price, String brand) {
+        this.PRICE = price;
+        this.BRAND = brand;
     }
 
     @Override
@@ -17,14 +21,13 @@ public class SmartPhone implements ICamera, IGPS, IRadio, ISimCard, IWifi {
 
     @Override
     public String[] viewPhotos() {
-
-        return new String[0];
+        return new String[0]; // nog geen opslag: lege galerij
     }
 
     @Override
     public String locatie(double latitude, double longitude) {
         System.out.println("Located at lat: " + latitude + ", long: " + longitude);
-        return "";
+        return "lat: " + latitude + ", long: " + longitude;
     }
 
     @Override
@@ -49,6 +52,8 @@ public class SmartPhone implements ICamera, IGPS, IRadio, ISimCard, IWifi {
 
     @Override
     public void disconnect(String internetConnection) {
-        System.out.println("Disconnected to: " + internetConnection);
+        System.out.println("Disconnected from: " + internetConnection); // bugfix: "to" -> "from"
     }
+
+    // startCall/endCall komen gratis mee als default-methodes van ISimCard
 }

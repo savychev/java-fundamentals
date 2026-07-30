@@ -1,20 +1,23 @@
 package be.intecbrussel.les1.casting;
 
-public class mainApp {
+/**
+ * Upcasting en downcasting tussen Parent en Child.
+ */
+public class MainApp {
     public static void main(String[] args) {
-        // Upcasting
+        // Upcasting: impliciet, altijd veilig (Child IS een Parent)
         Parent parent = new Child();
         parent.name = "Intec Brussel";
 
-        // Printing the parent class name
         System.out.println(parent.name);
 
-        // Parent class method is overridden method hence this will be executed
+        // De overschreven methode van Child wordt uitgevoerd (dynamic dispatch)
         parent.method();
 
-        // Trying to Downcasting Implicitly. You will get a compile time error.
+        // Impliciet downcasten kan niet: dit geeft een compileerfout
         // Child child = new Parent();
-        // Downcasting Explicitly
+
+        // Downcasting: expliciet, kan alleen als het object echt een Child is
         Child child = (Child) parent;
         System.out.println(child.name);
         child.method();

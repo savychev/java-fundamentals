@@ -1,10 +1,13 @@
 package be.intecbrussel.les2.Oefening7;
 
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.time.Month;
 import java.time.Period;
 
+/**
+ * Oefening 7.3 - leeftijd berekenen met Period.between():
+ * het verschil tussen geboortedatum en vandaag in jaren, maanden en dagen.
+ */
 public class Oefening7_3 {
     public static void main(String[] args) {
         LocalDate now = LocalDate.now();

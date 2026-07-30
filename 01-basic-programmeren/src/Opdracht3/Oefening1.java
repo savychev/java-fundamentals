@@ -1,16 +1,14 @@
 package Opdracht3;
 
-//Schrijf een programma dat een cijfer omzet naar het woord.
-
+/** Oefening: zet een cijfer (0-9) om naar het bijbehorende woord met een switch. */
 public class Oefening1 {
     public static void main(String[] args) {
         String output;
-
         int input = 2;
 
         switch (input) {
             case 0:
-                output = "Null";
+                output = "Zero";
                 break;
             case 1:
                 output = "One";
@@ -40,10 +38,9 @@ public class Oefening1 {
                 output = "Nine";
                 break;
             default:
-                output = "Incorrect number.";
+                output = "Incorrect number."; // alles buiten 0-9
         }
 
         System.out.println(output);
-
     }
 }

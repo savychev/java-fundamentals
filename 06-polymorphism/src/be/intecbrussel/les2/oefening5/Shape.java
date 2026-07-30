@@ -1,7 +1,10 @@
 package be.intecbrussel.les2.oefening5;
 
+/**
+ * Basisvorm met overloaded methodes; subklassen overschrijven hun variant.
+ */
 public class Shape {
-    public double getPerimeter(double radius){
+    public double getPerimeter(double radius) {
         return 0;
     }
 

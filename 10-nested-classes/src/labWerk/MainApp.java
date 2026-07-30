@@ -1,11 +1,16 @@
 package labWerk;
 
+/**
+ * Demo: verschil tussen een niet-statische inner class en een
+ * static nested class bij het aanmaken en gebruiken.
+ */
 public class MainApp {
     public static void main(String[] args) {
         OuterClass outer = new OuterClass();
         outer.setA(1);
         outer.setB(2);
 
+        // Niet-statische inner class: aanmaken via een bestaande outer-instantie.
         OuterClass.MathFunctions mathFunctions = outer.new MathFunctions();
         System.out.println("non-static Min: " + mathFunctions.min());
         System.out.println("non-static Max: " + mathFunctions.max());
@@ -15,15 +20,17 @@ public class MainApp {
 
         System.out.println(" - - - ");
 
+        // Static nested class: geen outer-instantie nodig.
         OuterClassWithStaticInnerClass.MathFunctionsStatic inner = new OuterClassWithStaticInnerClass.MathFunctionsStatic();
         System.out.println("static met parameters Min: " + inner.min(3, 4));
         System.out.println("static met parameters Max: " + inner.max(3, 4));
         System.out.println("static met parameters Sum: " + inner.sum(3, 4));
-//        System.out.println("static met parameters Product: " + inner.product(3, 4)); // geen toegang
-//        System.out.println("static met parameters Sum: " + inner.sum(3, 4)); // geen toegang
+//        System.out.println("static met parameters Product: " + inner.product(3, 4)); // geen overload met parameters
+//        System.out.println("static met parameters Division: " + inner.division(3, 4)); // geen overload met parameters
 
         System.out.println(" - - - ");
 
+        // Zelfde nested class, maar nu zijn de velden via de constructor gevuld.
         OuterClassWithStaticInnerClass.MathFunctionsStatic innerWithArguments = new OuterClassWithStaticInnerClass.MathFunctionsStatic(3, 4);
         System.out.println("static zonder parameters Min: " + innerWithArguments.min());
         System.out.println("static zonder parameters Max: " + innerWithArguments.max());

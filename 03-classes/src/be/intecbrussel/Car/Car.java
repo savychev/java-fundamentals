@@ -2,10 +2,15 @@ package be.intecbrussel.Car;
 
 import java.util.Random;
 
+/**
+ * Uitgebreid klasse-voorbeeld: vier overloaded constructors, encapsulatie
+ * met getters/setters, een static teller die alle Car-objecten telt en
+ * instantiemethodes met gedrag (speedUp, toggleLights, ...).
+ */
 public class Car {
-    private static int numberCars; // a static variable that stores the number of cars
+    private static int numberCars; // static: gedeeld door alle Car-objecten
 
-    // default values
+    // standaardwaarden voor de constructors
     private final String defaultColor = "white";
     private final int defaultSpeed = 120;
     private final int defaultPower = 150;
@@ -18,6 +23,7 @@ public class Car {
 
     private int currentSpeed;
 
+    // constructor-overloading: van 0 tot 3 argumenten
     public Car() {
         setColor(this.defaultColor);
         setMaxSpeed(this.defaultSpeed);
@@ -86,6 +92,7 @@ public class Car {
         Car.numberCars = numberCars;
     }
 
+    // wordt in elke constructor aangeroepen: telt hoeveel auto's er bestaan
     public static void counterCars() {
         Car.numberCars++;
     }
@@ -106,10 +113,11 @@ public class Car {
         Random random = new Random();
         int min = 100;
         int max = 300;
-        int randomNumber = random.nextInt(min, max + 1);
+        int randomNumber = random.nextInt(min, max + 1); // 100 t.e.m. 300
         System.out.println("Repair costs " + randomNumber + " euros.");
     }
 
+    // boolean-veld omschakelen: lichten aan/uit
     public void toggleLights() {
         String result;
 
@@ -124,6 +132,7 @@ public class Car {
         System.out.println(result);
     }
 
+    // validatie: naam moet minstens 5 tekens hebben (zonder witruimte)
     public void assignDriver(String driverName) {
         if (driverName.trim().length() >= 5) {
             this.driverName = driverName;
@@ -135,10 +144,11 @@ public class Car {
     public String generateLicensePlate() {
         Random random = new Random();
 
+        // eerste 3 letters van de bestuurder + willekeurig nummer
         String letters = this.driverName.substring(0, 3).toUpperCase();
         int nummer = random.nextInt(100, 999 + 1);
 
-       return letters + "-" + nummer;
+        return letters + "-" + nummer;
     }
 
     @Override

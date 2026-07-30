@@ -1,15 +1,20 @@
 package robots;
 
+/**
+ * Basisklasse voor alle robots. Concreet (niet abstract), zodat ook een
+ * "gewone" robot aangemaakt kan worden.
+ */
 public class Robot {
+
     private String unitName;
 
     public Robot() {
-        this("Unknown");
+        this("Unknown"); // constructor-chaining naar de andere constructor
     }
 
     public Robot(String unitName) {
         this.unitName = unitName;
-        this.boot();
+        this.boot(); // let op: overridebare methode in een constructor (zie CrazyRobot)
     }
 
     public void boot() {

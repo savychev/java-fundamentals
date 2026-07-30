@@ -2,13 +2,18 @@ package oefeningen.oefening3;
 
 import java.util.Arrays;
 
+/**
+ * Car implementeert het volledige Vehicle-contract
+ * (en dus ook Motor en Switch1).
+ */
 public class Car implements Vehicle {
+
     private boolean isOn = false;
-    private boolean[] stateOfDoors = new boolean[doors];
+    private boolean[] stateOfDoors = new boolean[doors]; // constante uit de interface
 
     public boolean isDoorOpen() {
         for (boolean door : stateOfDoors) {
-            if (door) {
+            if (door) { // true betekent: deur staat open
                 return true;
             }
         }
@@ -17,10 +22,11 @@ public class Car implements Vehicle {
 
     @Override
     public void gas() {
+        // rijden mag alleen met draaiende motor en alle deuren dicht
         if (isOn && !isDoorOpen())
             System.out.println("Let's go!");
         else
-            System.out.println("The car can't riding. The engine is off or one of the doors are open.");
+            System.out.println("The car can't drive. The engine is off or one of the doors is open.");
     }
 
     @Override

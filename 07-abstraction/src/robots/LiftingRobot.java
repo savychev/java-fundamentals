@@ -1,6 +1,10 @@
 package robots;
 
+/**
+ * Robot die kan tillen tot een maximale hoogte.
+ */
 public class LiftingRobot extends Robot {
+
     private double maxLiftHeight;
 
     public LiftingRobot(String unitName, double maxLiftHeight) {
@@ -10,7 +14,7 @@ public class LiftingRobot extends Robot {
 
     public void lift(double height) {
         if (height > maxLiftHeight)
-            System.out.println("Het liften niet mogelijk is.");
+            System.out.println("Het liften is niet mogelijk."); // te hoog
         else
             System.out.println("Het is gelukt");
     }

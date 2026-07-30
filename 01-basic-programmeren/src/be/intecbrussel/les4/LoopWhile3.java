@@ -1,23 +1,24 @@
 package be.intecbrussel.les4;
 
+/** Les 4: while-lus met een boolean als voorwaarde (vlag) in plaats van een teller. */
 public class LoopWhile3 {
     public static void main(String[] args) {
-       boolean hungry = true;
-       int count = 0;
+        boolean hungry = true;
+        int count = 0;
 
         System.out.println("Take flour");
         System.out.println("Add milk");
         System.out.println("Add eggs");
         System.out.println("Mix ingredients");
 
-        while (hungry){
+        while (hungry) {
             ++count;
 
-            System.out.println("Bake pancake "+count);
-            System.out.println("Eat pancake "+count);
+            System.out.println("Bake pancake " + count);
+            System.out.println("Eat pancake " + count);
 
-            if(count == 4) {
-                hungry = false;
+            if (count == 4) {
+                hungry = false; // de vlag omzetten beëindigt de lus
             }
         }
     }

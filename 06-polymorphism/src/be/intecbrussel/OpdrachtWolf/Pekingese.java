@@ -1,5 +1,8 @@
 package be.intecbrussel.OpdrachtWolf;
 
+/**
+ * Pekingees: speelse huishond met lange haren.
+ */
 public class Pekingese extends HomelyDog {
     private double hairLength;
 
